@@ -104,7 +104,7 @@
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
-  <h1>МЕГА БОНУСКА 3.0</h1>
+  <h1>LuckyJet Бонус</h1>
   <div id="chances">У вас попыток: <span id="attempts">1</span></div>
 
   <div class="wrapper">
@@ -117,25 +117,31 @@
         <div class="slot-item">25 FP</div>
         <div class="slot-item">Скидка 20%</div>
         <div class="slot-item">Бонус за 5.000₽</div>
+        <div class="slot-item">Ваучер на 7.000₽</div>
         <div class="slot-item">30 FP</div>
-        <div class="slot-item">Скидка 50%</div>
-        <div class="slot-item">Ваучер 10.000₽</div>
+        <div class="slot-item">Бонус 10%</div>
         <div class="slot-item">25 FP</div>
+        <div class="slot-item">Бонус за 20.000₽</div>
         <div class="slot-item">Скидка 35%</div>
+        <div class="slot-item">Ваучер на 30.000₽</div>
+        <div class="slot-item">15 FP</div>
+        <div class="slot-item">Скидка 40%</div>
         <div class="slot-item">Бонус за 15.000₽</div>
-        <div class="slot-item">25 FP</div>
+        <div class="slot-item">Сигнал CS2</div>
+        <div class="slot-item">Секретный бонус</div>
+        <div class="slot-item">Ваучер на 50.000₽</div>
 
-        <!-- Победные слоты (попадут под стрелки) -->
-        <div class="slot-item">СИГНАЛЫ LUCKYJET</div>
-        <div class="slot-item">+150% К ДЕПОЗИТУ</div>
-        <div class="slot-item">БОНУСКА ЗА 50 000₽ (–92%)</div>
+        <!-- Победные слоты -->
+        <div class="slot-item">Сигнал LuckyJet</div>
+        <div class="slot-item">+150% к депозиту</div>
+        <div class="slot-item">Бонус за 50 000₽ (–92%)</div>
       </div>
     </div>
   </div>
 
   <button id="spinBtn">КРУТИТЬ</button>
   <button id="claimBtn" onclick="window.location.href='https://lkhq.cc/24e8'">ЗАБРАТЬ БОНУС</button>
-  <div id="promo">Сделайте депозит на 1win от 4.000₽ и получите все 3 бонуса сразу!</div>
+  <div id="promo">Сделайте депозит на 1win от 3 500₽ и получите все 3 бонуса сразу!</div>
 
   <script>
     Telegram.WebApp.ready();
@@ -157,15 +163,15 @@
       const targetIndex = totalSlots - visibleSlots;
       const targetOffset = targetIndex * slotHeight;
 
-      reel.style.transition = "transform 12s cubic-bezier(0.15, 0.8, 0.3, 1)";
+      reel.style.transition = "transform 15s cubic-bezier(0.15, 0.8, 0.3, 1)";
       reel.style.transform = `translateY(-${targetOffset}px)`;
 
       setTimeout(() => {
-        confetti({ particleCount: 150, spread: 80, origin: { y: 0.6 } });
+        confetti({ particleCount: 200, spread: 100, origin: { y: 0.6 } });
         promo.style.display = "block";
         claimBtn.style.display = "inline-block";
         spinBtn.style.display = "none";
-      }, 12000);
+      }, 15000);
 
       attemptsEl.innerText = "0";
     };
